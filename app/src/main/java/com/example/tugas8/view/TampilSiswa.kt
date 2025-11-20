@@ -1,7 +1,6 @@
 package com.example.tugas8.view
 
 
-import androidx.annotation.experimental.Experimental
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,7 +17,6 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
@@ -26,17 +24,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tugas8.R
+import com.example.tugas8.model.Siswa
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TampilData(
+    statusUiSiswa: Siswa,
     onBackBtnClick: () ->Unit
 ){
     val items = listOf(
-        Pair(first = stringResource(id = R.string.nama_lengkap), second = "Contoh Nama" ),
-        Pair(first = stringResource(id = R.string.jenis_kelamin), second = "Lainnya" ),
-        Pair(first = stringResource(id = R.string.alamat), second = "Yogyakarta" )
+        Pair(first = stringResource(id = R.string.nama), second = statusUiSiswa.nama ),
+        Pair(first = stringResource(id = R.string.gender), second = statusUiSiswa.gender ),
+        Pair(first = stringResource(id = R.string.alamat), second = statusUiSiswa.alamat )
     )
     Scaffold(
         modifier = Modifier,
