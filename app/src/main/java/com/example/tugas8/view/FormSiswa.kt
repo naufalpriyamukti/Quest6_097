@@ -110,15 +110,16 @@ fun FormSiswa(
                 singleLine = true,
                 modifier = Modifier
                     .width(250.dp),
-                label = {Text(text = "Alamat")},
+                label = {Text(text = "Alamat Lengkap")},
                 onValueChange = {
                     txtAlamat = it
-                },
+                }
             )
             Spacer(modifier = Modifier.height(30.dp))
             Button(
                 modifier = Modifier.fillMaxWidth(1f),
-                onClick = OnSubmitButtonClicked
+                enabled = txtAlamat.isNotEmpty(),
+                onClick = {onSubmitButtonClicked(listData)}
             ){
                 Text(stringResource(id = R.string.submit))
             }
