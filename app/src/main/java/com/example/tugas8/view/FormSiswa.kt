@@ -3,9 +3,6 @@
 
 package com.example.tugas8.view
 
-
-
-import android.R.attr.text
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -35,9 +32,10 @@ import com.example.tugas8.R
 
 
 @Composable
-fun FormIsian(
-    jenisK:List<String> = listOf("Laki-laki", "Perempuan"),
-    OnSubmitBtnClick : () -> Unit
+fun FormSiswa(
+    pilihanJK: List<String> ,
+    onSubmitButtonClicked: (MutableList<String>) -> Unit,
+    modifier: Modifier = Modifier
 ){
     Scaffold (modifier= Modifier,
         {
