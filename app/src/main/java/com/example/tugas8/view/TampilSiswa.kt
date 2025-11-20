@@ -29,9 +29,9 @@ import com.example.tugas8.model.Siswa
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TampilData(
+fun TampilSiswa(
     statusUiSiswa: Siswa,
-    onBackBtnClick: () ->Unit
+    onBackButtonClicked: () ->Unit
 ){
     val items = listOf(
         Pair(first = stringResource(id = R.string.nama), second = statusUiSiswa.nama ),
