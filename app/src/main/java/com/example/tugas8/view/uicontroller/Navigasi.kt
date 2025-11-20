@@ -1,4 +1,4 @@
-package com.example.tugas8
+package com.example.tugas8.view.uicontroller
 
 
 import androidx.compose.foundation.layout.padding
